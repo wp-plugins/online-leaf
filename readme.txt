@@ -26,7 +26,7 @@ Online Leaf aims to reduce the overall CO2 emissions from displaying websites, w
 1. Upload the folder `online-leaf` to the `/wp-content/plugins/` directory or search for `Online Leaf` in `Plugins` > `Add new` and click `Install` to the right of `Online Leaf`
 2. Activate the plugin through the `Plugins` menu in WordPress
 
-You can also manually install the standby engine by following the instructions on [OnlineLeaf.com](http://www.onlineleaf.com/ "OnlineLeaf.com") (perhaps if you manage other websites than WordPress blogs).
+You can also manually install the standby engine by following the instructions on [OnlineLeaf.com](http://www.onlineleaf.com/ "OnlineLeaf.com") (might be useful if you manage other websites than WordPress blogs).
 
 
 == Screenshots ==
@@ -44,4 +44,4 @@ It is pretty straight forward. You install the plugin and your website instantly
 
 = I have another question anyway =
 
-Please do not hesitate to [contact us](http://www.onlineleaf.com/Contact/ "contact us") or visit [OnlineLeaf.com](http://www.onlineleaf.com/ "OnlineLeaf.com").
+Please do not hesitate to [contact us](http://www.onlineleaf.com/Contact/ "contact us") or visit [OnlineLeaf.com](http://www.onlineleaf.com/ "OnlineLeaf.com") for more information.
