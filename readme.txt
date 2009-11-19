@@ -16,7 +16,7 @@ This plugin enables your blog to install a green standby engine on your blog. Th
 
 = The goal =
 
-Online Leaf aims to reduce the overall CO2 emissions from displaying websites, without any loss of visitor experience. You can still use visual effects, animations and heavy graphics to improve your website's overall quality, since the standby engine does not conflict with any of those (as it is only activated when your visitors are inactive). The only change is that your blog will be a [Green Website](http://www.onlineleaf.com/ "Green Website") and help in making the web a much greener place to surf.
+Online Leaf aims to reduce the overall CO2 emissions from displaying websites, without any loss of visitor experience. You can still use visual effects, animations and heavy graphics to improve your website's overall quality, since the standby engine does not conflict with any of those (as it is only activated when your visitors are inactive). The only change is that your blog will be a [Green Website](http://www.onlineleaf.com/Green-Websites/ "Green Website") and help in making the web a much greener place to surf.
 
 
 == Installation ==
