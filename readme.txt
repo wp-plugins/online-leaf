@@ -1,4 +1,4 @@
-=== SpamTask ===
+=== Online Leaf ===
 Contributors: runejensen
 Tags: Green Website, Green, Environment, Friendly, CO2, Greener Web, Energy Consumption, Gas
 Requires at least: 2.6.1
