@@ -1,0 +1,41 @@
+h2 { color: #00a8ff; }
+h2 span, h3 span { color: #55ff00; }
+h3 {
+	margin: 5px 0 0 0;
+	border: 0;
+	padding: 0;
+}
+h4 { margin-bottom: -10px; padding: 0; }
+
+table.info {
+	border-top: 2px solid #d8dfea;
+	border-bottom: 2px solid #d8dfea;
+}
+table.info td {
+	background-color: #ffffff;
+	border-bottom: 1px solid #d8dfea;
+	vertical-align: middle;
+	padding: 5px;
+	line-height: 20px;
+}
+table.info tr.head td {
+	background-color: #f0faff;
+	border-bottom: 1px solid #55ff00;
+	padding: 5px;
+	line-height: 22px;
+	color: #333333;
+	font-weight: bold;
+}
+table.info tr.notice td {
+	background-color: #d8dfea;
+	color: #000000;
+}
+
+table tr td.code { font-size: 9px; padding: 0; line-height: 1; background-color: #f0faff; }
+
+table.info a.install, table.info a.deinstall { background-color: #999999; text-shadow: 0; border: 1px solid #666666; font-weight: bold; font-size: 12px; text-decoration: none; padding: 5px 10px 5px 10px; }
+table.info a.install { color: #55ff00; }
+table.info a.install:hover, table.info a.deinstall:hover { background-color: #AAAAAA; text-shadow: 0; }
+table.info a.deinstall { color: red; font-size: 9px; }
+
+p { text-shadow: 0 1px 0 #ffffff; }
