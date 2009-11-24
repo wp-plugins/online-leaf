@@ -5,7 +5,7 @@ Plugin Name: Online Leaf
 Plugin URI: http://www.onlineleaf.com/
 Description: 
 Author: Rune Jensen
-Version: 0.7
+Version: 0.8
 Author URI: http://www.rune-jensen.com/
 */
 

@@ -88,7 +88,7 @@ if(!class_exists("OnlineLeaf")) {
 		<tr>
 			<td align="center">'.iif($installed['standby'], '<font color="#44cc00"><b>Installed</b></font><br />').'<a href="options-general.php?page=onlineleaf_settings&'.iif($installed['standby'], 'un').'install=standby" class="'.iif($installed['standby'], 'de').'install">'.iif($installed['standby'], 'UN').'INSTALL</a></td>
 			<td>Standby</td>
-			<td><p>Detects inactivity and automatically launches a standby screen in dark colors<a href="#dark_colors" style="text-decoration: none;"><sup>1</sup></a>, which also hides active animations and other visual effects.<br />Launches when the visitor is inactive, and returns to the page as soon as the visitor is active again (moves his/her mouse across the website).</p></td>
+			<td><p>Detects inactivity and automatically launches a standby screen in dark colors<a href="#dark_colors" style="text-decoration: none;"><sup>1</sup></a>, which also hides active animations and other visual effects.<br />Launches when the visitor is inactive, and returns to the page as soon as the visitor is active again (moves his/her mouse across the website, or uses the keyboard).</p></td>
 		</tr>
 	</table>
 	<ul>

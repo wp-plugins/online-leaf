@@ -1,10 +1,11 @@
 === Online Leaf ===
 Contributors: runejensen
+Donate link: http://www.onlineleaf.com/Donate/
 Tags: Green Website, Green, Environment, Friendly, CO2, Greener Web, Energy Consumption, Gas
 Requires at least: 2.6.1
 Tested up to: 2.8.6
 
-Integrates a standby engine to reduce the energy required to view the website, when the visitors are inactive, to make your blog a Green Website.
+Integrates a standby engine to reduce the energy required to view the website when the visitors are inactive, to make your blog a Green Website.
 
 == Description ==
 
@@ -12,7 +13,7 @@ Because Internet browsing consumes a lot of energy on a global level, [Online Le
 
 = The plugin =
 
-This plugin enables your blog to install a green standby engine on your blog. The engine will automatically activate a dark screen when your visitors are inactive, which darkens the colors and hides animations and effects, so that the monitors do not waste energy generating those and simply because dark colors usually require less energy to display than brighter ones.
+This plugin enables your blog to install a green standby engine on your blog. The engine will automatically activate a dark screen when your visitors are inactive, which darkens the colors and hides animations and effects, so that the monitors do not waste energy generating those and simply because dark colors, on many monitors, require less energy to display than brighter ones.
 
 = The goal =
 
