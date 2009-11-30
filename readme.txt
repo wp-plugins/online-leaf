@@ -27,16 +27,19 @@ Online Leaf aims to reduce the overall CO2 emissions from displaying websites, w
 1. Upload the folder `online-leaf` to the `/wp-content/plugins/` directory or search for `Online Leaf` in `Plugins` > `Add new` and click `Install` to the right of `Online Leaf`
 2. Activate the plugin through the `Plugins` menu in WordPress
 
-You can also manually install the standby engine by following the instructions on [OnlineLeaf.com](http://www.onlineleaf.com/ "OnlineLeaf.com") (might be useful if you manage other websites than WordPress blogs).
+You can also manually install the standby engine by following the instructions on [OnlineLeaf.com](http://www.onlineleaf.com/ "OnlineLeaf.com") or [OnlineLeaf.com/Advanced/](http://www.onlineleaf.com/Advanced/ "OnlineLeaf.com/Advanced/") for more configuration options (might be useful if you manage other websites than WordPress blogs).
 
 
 == Changelog ==
 
 = 0.9 =
 * Added changelog
+* Configurable timing before standby screen launches
 * Language selection added
-* - Language added (English, short code "en")
 * - Language added (Danish, short code "da")
+* - Language added (Dutch, short code "nl")
+* - Language added (English, short code "en")
+* - Language added (Italian, short code "it")
 * - Language added (Slovenian, short code "sl")
 
 = 0.8 =
@@ -55,10 +58,20 @@ You can also manually install the standby engine by following the instructions o
 
 == Frequently Asked Questions ==
 
+= How do I use it on other websites than WordPress? =
+
+There are some simple instructions on [OnlineLeaf.com/Advanced/](http://www.onlineleaf.com/Advanced/ "OnlineLeaf.com/Advanced/"), which will guide you through setting up the standby engine on any website.
+
+= How can I help? =
+
+If you like developing plugins or anything else, we highly appreciate all the help we can get to extend the project even further, so please don't hesitate to [contact us](http://www.onlineleaf.com/Contact/ "contact us") if you feel like working with us to help the environment.
+We also advise you to share it wherever you can, so people get to know about the project more quickly. [Digg it](http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.onlineleaf.com%2F&title=Online%20Leaf%20-%20Making%20Websites%20Greener&bodytext=As+a+new+environmental+initiative%2C+Online+Leaf+provides+lightweight%2C+yet+powerful%2C+easily+installable+solutions+to+reduce+the+energy+required+to+generate+websites.%0AThe+project%27s+goal+is+to+create+Green+Websites+and+reduce+the+amount+of+CO2+produced+while+browsing+the+web%2C+all+without+loss+of+the+websites%27+user+experience.&topic=environment "Digg it"), [Share it on Facebook](http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.onlineleaf.com%2F&t=Online%20Leaf%20-%20Making%20Websites%20Greener "Share it on Facebook"), [Twit it](http://twitter.com/home?status=http%3A%2F%2Fwww.onlineleaf.com%2F "Twit it"), give it a good rating here on WordPress.org or even write a blog post about it. Anything is much appreciated.
+... and of course, any contribution and donation will be a great help to maintain the servers and keep the development at high speed. To thank you, we also list you as Green Donor along with your website on [OnlineLeaf.com/Donate/](http://www.onlineleaf.com/Donate/ "OnlineLeaf.com/Donate/") and [OnlineLeaf.com/Green-Websites/](http://www.onlineleaf.com/Green-Websites/ "OnlineLeaf.com/Green-Websites/").
+
 = Why are there so few questions? =
 
 It is pretty straight forward. You install the plugin and your website instantly becomes green and reduces the energy required to generate it. There is really not much to it.
 
 = I have another question anyway =
 
-Please do not hesitate to [contact us](http://www.onlineleaf.com/Contact/ "contact us") or visit [OnlineLeaf.com](http://www.onlineleaf.com/ "OnlineLeaf.com") for more information.
+Feel free to [contact us](http://www.onlineleaf.com/Contact/ "contact us") or visit [OnlineLeaf.com](http://www.onlineleaf.com/ "OnlineLeaf.com") for more information.
