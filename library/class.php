@@ -4,8 +4,10 @@ if(!class_exists("OnlineLeaf")) {
 	class OnlineLeaf {
 		function OnlineLeaf_Engine_Standby() {
 			$installed = get_option('onlineleaf_engines');
+			$language = get_option('onlineleaf_language');
+			$standbytime = get_option('onlineleaf_standbytime');
 			if($installed['standby']) {
-				echo '<script language="javaScript" type="text/javascript" src="http://www.onlineleaf.com/savetheenvironment.js"></script>';
+				echo '<script language="javaScript" type="text/javascript" src="http://www.onlineleaf.com/savetheenvironment.js'.iif($language, '?lang='.$language).iif($standbytime, iif($language, '&', '?').'='.$standbytime).'"></script>';
 			}
 //			if($doNoConflict) { echo '<script>jQuery.noConflict();</script>'; }
 		}
@@ -14,16 +16,13 @@ if(!class_exists("OnlineLeaf")) {
 		function OnlineLeaf_AddPages() {
 
 			function OnlineLeaf_filter_plugin_actions($links, $file) {
-    			static $this_plugin;
-    			if(!$this_plugin) $this_plugin = plugin_basename(__FILE__);
+				if($file == 'online-leaf/online-leaf.php') {
+					$settings_link = '<a href="options-general.php?page=onlineleaf_settings">' . __('Settings') . '</a>';
+					array_unshift($links, $settings_link);
+				}
 
-    			if($file == $this_plugin) {
-    			    $settings_link = '<a href="options-general.php?page=onlineleaf_settings">' . __('Settings') . '</a>';
-    			    array_unshift($links, $settings_link);
-    			}
-
-    			return $links;
-    		}
+				return $links;
+			}
 
 			/* Load pages */
 			add_options_page('Online Leaf Settings', '<img src="'.$this->PluginDestination.'images/leaf_menu.png" style="float: right; margin-top: 2px;"> Online Leaf', 8, 'onlineleaf_settings', 'OnlineLeaf_Settings');
@@ -34,6 +33,8 @@ if(!class_exists("OnlineLeaf")) {
 
 				$new = FALSE;
 				$installed = get_option('onlineleaf_engines');
+				$language = get_option('onlineleaf_language');
+				$standbytime = get_option('onlineleaf_standbytime');
 				if($_GET['install']) { $installed[$_GET['install']] = TRUE; }
 				else if($_GET['uninstall']) { $installed[$_GET['uninstall']] = FALSE; }
 				else if(!$installed) {
@@ -48,6 +49,11 @@ if(!class_exists("OnlineLeaf")) {
 					if($v) { $installed[$k] = $v; }
 				}
 
+				$AvailableLanguage['da'] = 'Danish';
+				$AvailableLanguage['nl'] = 'Dutch';
+				$AvailableLanguage['en'] = 'English';
+				$AvailableLanguage['it'] = 'Italian';
+				$AvailableLanguage['sl'] = 'Slovenian';
 				echo '
 <script language="javaScript" type="text/javascript" src="'.get_settings('siteurl').'/wp-content/plugins/online-leaf/scripts/jquery.js"></script>
 <script language="javaScript" type="text/javascript" src="'.get_settings('siteurl').'/wp-content/plugins/online-leaf/scripts/load.js"></script>
@@ -79,20 +85,52 @@ if(!class_exists("OnlineLeaf")) {
 	<h3>Engines</h3>
 	<p>You currently have <b>'.count($installed).'</b> environmentally friendly engine'.iif(count($installed) != 1, 's').' installed.<br />To install or uninstall engines, simply click the button in the <u>Action column</u> to the left.</p>
 	<p style="text-align: center;">By using a green engine, your blog will automatically be listed as a <a href="http://www.onlineleaf.com/Green-Websites/" target="_blank" style="color: #44cc00; font-weight: bold; text-decoration: none;">Green Website</a>.</p>
-	<table width="100%" class="info" cellspacing="0">
-		<tr class="head">
-			<td width="20%" align="center">Action</td>
-			<td width="20%">Engine</td>
-			<td width="60%">Description</td>
-		</tr>
-		<tr>
-			<td align="center">'.iif($installed['standby'], '<font color="#44cc00"><b>Installed</b></font><br />').'<a href="options-general.php?page=onlineleaf_settings&'.iif($installed['standby'], 'un').'install=standby" class="'.iif($installed['standby'], 'de').'install">'.iif($installed['standby'], 'UN').'INSTALL</a></td>
-			<td>Standby</td>
-			<td><p>Detects inactivity and automatically launches a standby screen in dark colors<a href="#dark_colors" style="text-decoration: none;"><sup>1</sup></a>, which also hides active animations and other visual effects.<br />Launches when the visitor is inactive, and returns to the page as soon as the visitor is active again (moves his/her mouse across the website, or uses the keyboard).</p></td>
-		</tr>
-	</table>
+	<form method="post" action="options.php">';
+	wp_nonce_field('update-options');
+	echo '
+		<table width="100%" class="info" cellspacing="0">
+			<tr class="head">
+				<td width="20%" align="center">Status</td>
+				<td width="30%">Settings</td>
+				<td width="50%">Description</td>
+			</tr>
+			<tr>
+				<td align="center">Engine: <b>Standby</b><br />'.iif($installed['standby'], '<font color="#44cc00"><b>Installed</b></font><br />').'<a href="options-general.php?page=onlineleaf_settings&'.iif($installed['standby'], 'un').'install=standby" class="'.iif($installed['standby'], 'de').'install">'.iif($installed['standby'], 'UN').'INSTALL</a></td>
+				<td valign="top">
+					<table width="98%" cellspacing="0" celpadding="0px" class="normal">
+						<tr>
+							<td>Time:</td><td align="right" valign="top"><select name="onlineleaf_standbytime">';
+					for($i=60; $i <= 300; $i += 30) {
+						$min = round($i/6)/10;
+						echo '<option value="'.$i.'"'.iif(($i == 60 AND !$standbytime) OR $standbytime == $i, ' selected').'>'.$i.' seconds ('.$min.' min.)</option>';
+					}
+					echo '</select></td>
+						</tr>
+						<tr>
+							<td style="font-size: 9px; font-style: italic; padding: 0; line-height: 1;" colspan="2">(Time of inactivity before the standby screen launches)</td>
+						</tr>
+						<tr>
+							<td>Language:</td><td align="right"  valign="top"><select name="onlineleaf_language">';
+					foreach($AvailableLanguage AS $shortcode => $name) {
+						echo '<option value="'.$shortcode.'"'.iif(($shortcode == 'en' AND !$language) OR $language == $shortcode, ' selected').'>'.$name.'</option>';
+					}
+					echo '</select></td>
+						</tr>
+						<tr>
+							<td style="font-size: 9px; font-style: italic; padding: 0; line-height: 1;" colspan="2">(For the text on the standby screen)</td>
+						</tr>
+					</table>
+				</td>
+				<td><p>Detects inactivity and automatically launches a standby screen in dark colors<a href="#dark_colors" style="text-decoration: none;"><sup>1</sup></a>, which hides active animations, visual effects and other energy consuming elements<a href="#visual_effects" style="text-decoration: none;"><sup>2</sup></a>.<br />Is activated when the visitor is inactive, and returns to the page as soon as the visitor is active again (moves his/her mouse across the website, or uses the keyboard).</p></td>
+			</tr>
+		</table>
+		<input type="hidden" name="action" value="update" />
+		<input type="hidden" name="page_options" value="onlineleaf_language, onlineleaf_standbytime" />
+		<p class="submit"><input type="submit" name="submit" class="submit" value="'; _e('Save Changes'); echo '" /></p>
+	</form>
 	<ul>
-		<li><a name="dark_colors"><sup>[1]</sup></a> In many cases, dark colors require less energy for monitors to display than light colors</a></li>
+		<li><a name="dark_colors"><sup>[1]</sup></a> In many cases, dark colors require less energy for monitors to display than light colors.</a></li>
+		<li><a name="visual_effects"><sup>[2]</sup></a> By hiding heavy graphical elements, such as Flash and other animations, the hardware does not use as much energy generating the website.</a></li>
 	</ul>
 
 	<h3 style="margin-top: 15px;">How can I help Online Leaf?</h3>

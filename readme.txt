@@ -30,6 +30,22 @@ Online Leaf aims to reduce the overall CO2 emissions from displaying websites, w
 You can also manually install the standby engine by following the instructions on [OnlineLeaf.com](http://www.onlineleaf.com/ "OnlineLeaf.com") (might be useful if you manage other websites than WordPress blogs).
 
 
+== Changelog ==
+
+= 0.9 =
+* Added changelog
+* Language selection added
+* - Language added (English, short code "en")
+* - Language added (Danish, short code "da")
+* - Language added (Slovenian, short code "sl")
+
+= 0.8 =
+* Registers keystrokes as activity
+* More efficient and faster loading
+
+= 0.7 =
+* First version of Online Leaf
+
 == Screenshots ==
 
 1. One-click installation of Green Engines

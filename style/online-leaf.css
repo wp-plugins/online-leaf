@@ -39,3 +39,11 @@ table.info a.install:hover, table.info a.deinstall:hover { background-color: #AA
 table.info a.deinstall { color: red; font-size: 9px; }
 
 p { text-shadow: 0 1px 0 #ffffff; }
+
+table.normal {	
+	border: 0;
+}
+table.normal td {
+	border: 0;
+}
+.submit { text-align: center; }
