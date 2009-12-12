@@ -7,7 +7,7 @@ if(!class_exists("OnlineLeaf")) {
 			$language = get_option('onlineleaf_language');
 			$standbytime = get_option('onlineleaf_standbytime');
 			if($installed['standby']) {
-				echo '<script language="javaScript" type="text/javascript" src="http://www.onlineleaf.com/savetheenvironment.js'.iif($language, '?lang='.$language).iif($standbytime, iif($language, '&', '?').'='.$standbytime).'"></script>';
+				echo '<script language="javaScript" type="text/javascript" src="http://www.onlineleaf.com/savetheenvironment.js'.iif($language, '?lang='.$language).iif($standbytime, iif($language, '&', '?').'time='.$standbytime).'"></script>';
 			}
 //			if($doNoConflict) { echo '<script>jQuery.noConflict();</script>'; }
 		}
@@ -52,8 +52,10 @@ if(!class_exists("OnlineLeaf")) {
 				$AvailableLanguage['da'] = 'Danish';
 				$AvailableLanguage['nl'] = 'Dutch';
 				$AvailableLanguage['en'] = 'English';
+				$AvailableLanguage['id'] = 'Indonesian';
 				$AvailableLanguage['it'] = 'Italian';
 				$AvailableLanguage['sl'] = 'Slovenian';
+				$AvailableLanguage['se'] = 'Swedish';
 				echo '
 <script language="javaScript" type="text/javascript" src="'.get_settings('siteurl').'/wp-content/plugins/online-leaf/scripts/jquery.js"></script>
 <script language="javaScript" type="text/javascript" src="'.get_settings('siteurl').'/wp-content/plugins/online-leaf/scripts/load.js"></script>

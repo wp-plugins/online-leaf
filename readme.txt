@@ -32,6 +32,12 @@ You can also manually install the standby engine by following the instructions o
 
 == Changelog ==
 
+= 1.0 =
+* Fixed bug with timing option
+* Translation
+* - Language added (Indonesian, short code "id")
+* - Language added (Swedish, short code "se")
+
 = 0.9 =
 * Added changelog
 * Configurable timing before standby screen launches
