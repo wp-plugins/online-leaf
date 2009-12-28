@@ -3,7 +3,7 @@ Contributors: runejensen
 Donate link: http://www.onlineleaf.com/Donate/
 Tags: Green Website, Green, Environment, Friendly, CO2, Greener Web, Energy Consumption, Gas
 Requires at least: 2.6.1
-Tested up to: 2.8.6
+Tested up to: 2.9
 
 Integrates a standby engine to reduce the energy required to view the website when the visitors are inactive, to make your blog a Green Website.
 
@@ -17,8 +17,12 @@ This plugin enables your blog to install a green standby engine on your blog. Th
 
 = The goal =
 
-Online Leaf aims to reduce the overall CO2 emissions from displaying websites, without any loss of visitor experience. You can still use visual effects, animations and heavy graphics to improve your website's overall quality, since the standby engine does not conflict with any of those (as it is only activated when your visitors are inactive). The only change is that your blog will be a [Green Website](http://www.onlineleaf.com/Green-Websites/ "Green Website") and help in making the web a much greener place to surf.
+Online Leaf aims to reduce the overall CO<sub>2</sub> emissions from displaying websites, without any loss of visitor experience. You can still use visual effects, animations and heavy graphics to improve your website's overall quality, since the standby engine does not conflict with any of those (as it is only activated when your visitors are inactive). The only change is that your blog will be a [Green Website](http://www.onlineleaf.com/Green-Websites/ "Green Website") and help in making the web a much greener place to surf.
 
+= CO2 neutralized =
+
+The usage of Online Leaf is CO<sub>2</sub> neutralized, by acquiring CO<sub>2</sub> quotas, which are cleared with the state authorities in EU.
+Please read more about [CO2 neutralized websites](http://www.co2neutralwebsite.com/?utm_source=onlineleaf_01&utm_medium=onlineleaf_01&utm_campaign=onlineleaf_01 "CO2 neutralized websites") if you are interested.
 
 == Installation ==
 
@@ -32,21 +36,28 @@ You can also manually install the standby engine by following the instructions o
 
 == Changelog ==
 
+= 1.1 =
+* OnlineLeaf.com is [CO2 neutralized](http://www.co2neutralwebsite.com/?utm_source=onlineleaf&utm_medium=onlineleaf&utm_campaign=onlineleaf "CO2 neutralized")
+* Made compatible up to WordPress 2.9
+* Translation
+* . Language added (French, short code "fr")
+* . Language added (Vietnamese, short code "vi")
+
 = 1.0 =
 * Fixed bug with timing option
 * Translation
-* - Language added (Indonesian, short code "id")
-* - Language added (Swedish, short code "se")
+* . Language added (Indonesian, short code "id")
+* . Language added (Swedish, short code "se")
 
 = 0.9 =
 * Added changelog
 * Configurable timing before standby screen launches
 * Language selection added
-* - Language added (Danish, short code "da")
-* - Language added (Dutch, short code "nl")
-* - Language added (English, short code "en")
-* - Language added (Italian, short code "it")
-* - Language added (Slovenian, short code "sl")
+* . Language added (Danish, short code "da")
+* . Language added (Dutch, short code "nl")
+* . Language added (English, short code "en")
+* . Language added (Italian, short code "it")
+* . Language added (Slovenian, short code "sl")
 
 = 0.8 =
 * Registers keystrokes as activity

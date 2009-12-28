@@ -52,10 +52,12 @@ if(!class_exists("OnlineLeaf")) {
 				$AvailableLanguage['da'] = 'Danish';
 				$AvailableLanguage['nl'] = 'Dutch';
 				$AvailableLanguage['en'] = 'English';
+				$AvailableLanguage['fr'] = 'French';
 				$AvailableLanguage['id'] = 'Indonesian';
 				$AvailableLanguage['it'] = 'Italian';
 				$AvailableLanguage['sl'] = 'Slovenian';
 				$AvailableLanguage['se'] = 'Swedish';
+				$AvailableLanguage['vi'] = 'Vietnamese';
 				echo '
 <script language="javaScript" type="text/javascript" src="'.get_settings('siteurl').'/wp-content/plugins/online-leaf/scripts/jquery.js"></script>
 <script language="javaScript" type="text/javascript" src="'.get_settings('siteurl').'/wp-content/plugins/online-leaf/scripts/load.js"></script>
@@ -83,6 +85,9 @@ if(!class_exists("OnlineLeaf")) {
 	<p style="width: 48%;">There are most likely many people browsing your site each day, and even small things such as displaying a page, some white colors or an animation, increase the overall energy consumption from generating your website.</p>
 	<p style="width: 48%;"><a href="http://www.onlineleaf.com/" target="_blank">Online Leaf</a> is a green initiative, which attempts to reduce the CO<sup>2</sup> emitted from website browsing, <u>while still maintaining a great visitor experience</u>.</p>
 	<p style="width: 48%;">And how is this done? Well, this plugin serves as base for environmentally friendly engines and contains one-click install solutions for the energy saving methods Online Leaf develops. Remember, you can always uninstall any of our engines with a simple click, and we constantly develop new ones which will be available through this plugin.</p>
+
+	<h3>CO<sub>2</sub> neutralized usage</h3>
+	<p>As the engines run through OnlineLeaf.com, the usage is <a href="http://www.co2neutralwebsite.com/?utm_source=onlineleaf_01&utm_medium=onlineleaf_01&utm_campaign=onlineleaf_01" target="_blank">CO<sub>2</sub> neutralized</a> by acquiring CO<sub>2</sub> quotas which are cleared with the state authorities in EU.</p>
 
 	<h3>Engines</h3>
 	<p>You currently have <b>'.count($installed).'</b> environmentally friendly engine'.iif(count($installed) != 1, 's').' installed.<br />To install or uninstall engines, simply click the button in the <u>Action column</u> to the left.</p>
